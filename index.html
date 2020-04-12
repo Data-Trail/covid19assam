@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Connecting data from all around the globe to building data visualization dashboards. Weaving data stories with meaningful interpretations.">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+
+  <title>COVID 19 - ASSAM || Data Visualization of vital aspects</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/desk.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Sidebar - Brand -->
+          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./" style="text-decoration: none;">
+            <div class="sidebar-brand-icon rotate-n-15">
+              <img class="logo-alt" src="img/favicon.png" alt="logo">
+            </div>
+            <div class="sidebar-brand-text mx-3">COVID 19 : ASSAM</div>
+          </a>
+          <div class="topbar-divider d-none d-sm-block"></div>
+          <!-- Topbar Search -->
+          <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Items -->
+              <li class="nav-item no-arrow">
+                <a class="nav-link active" href="#" role="button">
+                  <span>Overview</span>
+                </a>
+              </li>
+              <!-- <li class="nav-item no-arrow">
+                <a class="nav-link" href="#" role="button">
+                  <span>Plots</span>
+                </a>
+              </li> -->
+            </ul>
+          </div>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link" href="#" role="button">
+                <span>India</span>&nbsp;
+                <img src="img/logo-flag.png" alt="flag" width="40px">
+              </a>
+              
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Overview</h1>
+            <a style="color: #fff;" id="lastUpdated" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fa-sm text-white-50"></i> </a>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Card -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Confirmed cases</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="confirmed"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Active Cases</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="activecases"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-hospital fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Recovered</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="recoveredcases"></div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-success handle" role="progressbar"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user-injured fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Death Count</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="deathcount"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-procedures fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="card shadow col-md-8">
+              <div class='tableauPlaceholder' id='viz1586531105430' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3R&#47;3RSGT6HD3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;3RSGT6HD3' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3R&#47;3RSGT6HD3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>     
+            </div>
+
+            <div class="card shadow col-md-4">
+              <table id="patientdata" class="table">
+                <thead class="m-0 font-weight-bold text-primary">
+                    <tr>
+                        <th>DISTRICT</th>
+                        <th>CONFIRMED</th>
+                        <th>RECOVERED</th>
+                        <th>DEATH</th>
+                    </tr>
+                </thead>
+                <tbody id="casestats"></tbody>
+              </table>
+            </div>
+          </div>
+         
+        
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>DATA COURTESY: <a href="https://api.covid19india.org/" target="_blank">COVID 19 INDIA</a> || Handcrafted with &#x2764; by <a href="http://datatrail.in" target="_blank">DATA TRAIL</a> 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/desk_api.js"></script>
+
+  <script type='text/javascript'>
+    let divElement = document.getElementById('viz1586531105430');
+    let vizElement = divElement.getElementsByTagName('object')[0];
+   
+    vizElement.style.width = '100%';
+    vizElement.style.height = '877px';
+
+    let scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+
+</body>
+
+</html>
