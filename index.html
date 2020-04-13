@@ -6,7 +6,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Connecting data from all around the globe to building data visualization dashboards. Weaving data stories with meaningful interpretations.">
+  <meta name="description" content="Connecting data from all around the globe to building data visualization dashboards.Weaving data stories with meaningful interpretations.">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163498462-1"></script>
+
+
   <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 
   <title>COVID 19 - ASSAM || Data Visualization of vital aspects</title>
@@ -180,7 +183,7 @@
             <div class="card shadow col-md-4">
             <div class="table-responsive">
                 <table id="patientdata" class="table">
-                  <thead>
+                  <thead class="m-0 font-weight-bold text-primary">
                       <tr>
                           <th>DISTRICT</th>
                           <th>CONFIRMED</th>
@@ -232,8 +235,13 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/desk_api.js"></script>
+  <script type='text/javaScript'>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  <script type='text/javascript'>
+    gtag('config', 'UA-163498462-1');
+ 
     let divElement = document.getElementById('viz1586531105430');
     let vizElement = divElement.getElementsByTagName('object')[0];
    

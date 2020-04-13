@@ -81,6 +81,6 @@
     }, 1000, 'easeInOutExpo');
     e.preventDefault();
   });
-  //document.addEventListener('contextmenu', event => event.preventDefault());
+  document.addEventListener('contextmenu', event => event.preventDefault());
 
 })(jQuery); // End of use strict
