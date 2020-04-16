@@ -4,13 +4,13 @@
   $.getJSON( "https://api.covid19india.org/data.json", function(data) {
     //console.log(data.statewise[19]);
 
-    $("#confirmed").html(data.statewise[21].confirmed)
-    $("#activecases").html(data.statewise[21].active)
-    $("#recoveredcases").html(data.statewise[21].recovered + "/" + data.statewise[21].active)
-    $("#deathcount").html(data.statewise[21].deaths)
-    $("#lastUpdated").html("Last updated on: " + data.statewise[21].lastupdatedtime)
+    $("#confirmed").html(data.statewise[20].confirmed)
+    $("#activecases").html(data.statewise[20].active)
+    $("#recoveredcases").html(data.statewise[20].recovered + "/" + data.statewise[20].active)
+    $("#deathcount").html(data.statewise[20].deaths)
+    $("#lastUpdated").html("Last updated on: " + data.statewise[20].lastupdatedtime)
     //update progres bar as per formula
-    let percent = ((data.statewise[21].recovered)/(data.statewise[21].active)*100) + "%"
+    let percent = ((data.statewise[20].recovered)/(data.statewise[20].active)*100) + "%"
     $(".handle").css('width', percent)
 
   });
@@ -45,6 +45,7 @@
       $("#casestats").html(responseText);
     }   
   });
+
 
   // Close any open menu accordions when window is resized below 768px
   $(window).resize(function() {
