@@ -2,15 +2,17 @@
   "use strict"; // Start of use strict
 
   $.getJSON( "https://api.covid19india.org/data.json", function(data) {
-    //console.log(data.statewise[19]);
+    //console.log(data.statewise);
+    let obj = data.statewise.find(x => x.statecode === 'AS');
+    let index = data.statewise.indexOf(obj);
 
-    $("#confirmed").html(data.statewise[21].confirmed)
-    $("#activecases").html(data.statewise[21].active)
-    $("#recoveredcases").html(data.statewise[21].recovered + "/" + data.statewise[21].active)
-    $("#deathcount").html(data.statewise[21].deaths)
-    $("#lastUpdated").html("Last updated on: " + data.statewise[21].lastupdatedtime)
+    $("#confirmed").html(data.statewise[index].confirmed)
+    $("#activecases").html(data.statewise[index].active)
+    $("#recoveredcases").html(data.statewise[index].recovered + "/" + data.statewise[index].confirmed)
+    $("#deathcount").html(data.statewise[index].deaths)
+    $("#lastUpdated").html("Last updated on: " + data.statewise[index].lastupdatedtime)
     //update progres bar as per formula
-    let percent = ((data.statewise[21].recovered)/(data.statewise[21].active)*100) + "%"
+    let percent = ((data.statewise[index].recovered)/(data.statewise[index].confirmed)*100) + "%"
     $(".handle").css('width', percent)
 
   });
@@ -36,7 +38,7 @@
     success: function(response)
     {
       let mydata = $.csv.toObjects(response);
-
+      //console.log(mydata);
       for(let i = 0; i < mydata.length; i++){
 
         responseText += "<tr><td>" + mydata[i].district + "</td><td>" + mydata[i].confirmed + "</td><td>" + mydata[i].recovered + "</td><td>" + mydata[i].death + "</td></tr>"

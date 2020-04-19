@@ -169,7 +169,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.card a { color: #ffffff; text-decoration: none; }
+.card_a_tag a { color: #ffffff; text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -10998,3 +10998,4 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+#mapid { height: 30rem; }
